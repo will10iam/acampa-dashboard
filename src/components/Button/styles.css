@@ -1,0 +1,89 @@
+.button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-image: linear-gradient(to right,
+            #fe3426,
+            #fe3426,
+            #fe3426,
+            #fe3426);
+
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f4f4ef;
+    gap: 10px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    font-family: 'Monument Extended Bold', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: -10px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+    color: #F5f5f5;
+}
+
+.button:hover {
+    transform: scale(1.01);
+
+}
+
+.button:hover .icon {
+    transform: translate(4px);
+}
+
+.button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .button {
+        font-size: 15px;
+    }
+}
