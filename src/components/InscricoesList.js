@@ -29,9 +29,8 @@ export default function InscricoesList() {
                         <img src={image} alt="" />
                         <div>
                             <h2>{inscricao.name}</h2>
-                            <h3>Telefone: {inscricao.phone}</h3>
-                            <h3>Pagamento em: {inscricao.payment}</h3>
-                            <button>Entrar em contato</button>
+                            <h3>Forma de Pagamento: <span>{inscricao.payment}</span></h3>
+                            <a href="/" class="bn3637 bn37">Entrar em Contato</a>
                         </div>
                     </li>
                 ))}

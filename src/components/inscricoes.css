@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     width: 50vw;
-    max-width: 650px;
+    max-width: 400px;
     padding: 10px;
     background: #121017;
     border-radius: 24px;
@@ -16,12 +16,12 @@
 }
 
 .cardInscrito img {
-    max-width: 250px;
+    max-width: 190px;
     width: 35vw;
     height: 150px;
     object-fit: cover;
-    margin-left: -250px;
-    margin-right: 30px;
+    margin-left: -100px;
+    margin-right: 20px;
     border-radius: inherit;
     box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
 }
@@ -29,17 +29,22 @@
 .cardInscrito h2 {
     font-size: 20px;
     margin-top: 0;
-    margin-right: -80px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    max-width: 21ch;
+
+    margin-bottom: 5px;
+    text-transform: capitalize;
 }
 
 .cardInscrito h3 {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 100;
     margin: 0;
     opacity: 0.75;
+    letter-spacing: 3px;
+}
+
+.cardInscrito span {
+    font-style: normal;
+    font-size: 20px;
 }
 
 .cardInscrito p {
@@ -57,6 +62,33 @@
     padding: 16px 26px;
     font-size: 16px;
     border-radius: 40px;
+}
+
+.bn3637 {
+    display: inline-flex;
+    padding: 0.1rem 0.3rem;
+    margin-left: -1px;
+    margin-top: 15px;
+    font-family: "Gosha Sans", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 0.8rem;
+}
+
+.bn37 {
+    border-color: transparent;
+    background-color: #fff;
+    color: #000;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.bn37:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
 
 @media (width <=600px) {
