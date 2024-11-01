@@ -23,13 +23,13 @@ export default function InscricoesList() {
 
     return (
         <div>
-            <ul>
+            <ul className='cardGeral'>
                 {inscricoes.map(inscricao => (
                     <li key={inscricao.id} className='cardInscrito'>
                         <img src={image} alt="" />
                         <div>
                             <h2>{inscricao.name}</h2>
-                            <h3>Forma de Pagamento: <span>{inscricao.payment}</span></h3>
+                            <h3>Pagamento: <span>{inscricao.payment}</span></h3>
                             <a href="/" class="bn3637 bn37">Entrar em Contato</a>
                         </div>
                     </li>

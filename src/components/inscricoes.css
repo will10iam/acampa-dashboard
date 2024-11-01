@@ -2,34 +2,57 @@
     box-sizing: border-box;
 }
 
-.cardInscrito {
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 10px;
+    margin-bottom: 50px;
+}
+
+.img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50vw;
-    max-width: 400px;
+
+}
+
+.img img {
+    width: 400px;
+    margin-top: -80px;
+    margin-bottom: -90px;
+}
+
+.cardInscrito {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    /* max-width: 400px; */
     padding: 10px;
     background: #121017;
     border-radius: 24px;
     list-style-type: none;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-left: 50px;
 }
 
 .cardInscrito img {
-    max-width: 190px;
-    width: 35vw;
+    /* max-width: 200px; */
+    width: 200px;
     height: 150px;
-    object-fit: cover;
-    margin-left: -100px;
-    margin-right: 20px;
+    /* object-fit: cover; */
+    margin-left: -1px;
+    margin-right: 50px;
     border-radius: inherit;
     box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
 }
 
 .cardInscrito h2 {
     font-size: 20px;
+    width: 20vw;
     margin-top: 0;
-
     margin-bottom: 5px;
     text-transform: capitalize;
 }

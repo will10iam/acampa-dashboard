@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 import InscricoesList from './InscricoesList';
+import logo from '../assets/logo.png'
 
 export default function Dashboard() {
     const navigate = useNavigate();
@@ -18,9 +19,17 @@ export default function Dashboard() {
 
     return (
         <div>
-            <h2>Inscritos para o <span>Acampa2025</span></h2>
+            <div className='img'>
+                <img src={logo} alt='' />
+            </div>
+
+            <div className='header'>
+                <h2>Inscritos para o <span>Acampa2025</span></h2>
+                <button onClick={handleLogout}>Sair</button>
+            </div>
+
             <InscricoesList />
-            <button onClick={handleLogout}>Sair</button>
+
             {/* Adicione mais funcionalidades do dashboard aqui */}
         </div>
     );
