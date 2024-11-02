@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
@@ -9,7 +9,17 @@ import logo from '../assets/logo.png'
 export default function Dashboard() {
     const navigate = useNavigate();
 
-    function handleLogout() {
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            if (!user) {
+                navigate('/');
+            }
+        });
+        return unsubscribe;
+    }, [navigate]);
+
+    function handleLogout(event) {
+        event.preventDefault();
         signOut(auth).then(() => {
             navigate('/');
         }).catch((error) => {
@@ -30,7 +40,6 @@ export default function Dashboard() {
 
             <InscricoesList />
 
-            {/* Adicione mais funcionalidades do dashboard aqui */}
         </div>
     );
 }

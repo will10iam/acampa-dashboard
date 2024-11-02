@@ -8,6 +8,7 @@ export default function InscricoesList() {
     const [inscricoes, setInscricoes] = useState([]);
 
     useEffect(() => {
+
         const fetchInscricoes = async () => {
             const inscricoesCollection = collection(db, 'inscricoes');
             const inscricoesSnapshot = await getDocs(inscricoesCollection);

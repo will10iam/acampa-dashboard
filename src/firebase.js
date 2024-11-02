@@ -1,7 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
+import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 
@@ -18,7 +17,16 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+setPersistence(auth, browserLocalPersistence)
+    .then(() => {
+        console.log('Persistência definida para localStorage');
+    })
+    .catch((error) => {
+        console.error('Erro ao definir persistência', error)
+    });
+
 const db = getFirestore(app);
-const analytics = getAnalytics(app);
+
 
 export { auth, db };
