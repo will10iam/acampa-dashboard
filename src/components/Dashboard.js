@@ -3,20 +3,19 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
+import { useAuth } from '../context/AuthContext';
 import InscricoesList from './InscricoesList';
 import logo from '../assets/logo.png'
 
 export default function Dashboard() {
+    const { user, loading } = useAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged((user) => {
-            if (!user) {
-                navigate('/');
-            }
-        });
-        return unsubscribe;
-    }, [navigate]);
+        if (!loading && !user) {
+            navigate('/');
+        }
+    }, [user, loading, navigate]);
 
     function handleLogout(event) {
         event.preventDefault();
@@ -26,6 +25,8 @@ export default function Dashboard() {
             console.error('Logout falhou', error);
         });
     }
+
+    if (loading) return <div>Carregando...</div>
 
     return (
         <div>
