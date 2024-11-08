@@ -1,27 +1,9 @@
 * {
     box-sizing: border-box;
+    color: white;
+    font-family: Gosha Sans, sans-serif;
 }
 
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 10px;
-    margin-bottom: 50px;
-}
-
-.img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.img img {
-    width: 400px;
-    margin-top: -80px;
-    margin-bottom: -90px;
-}
 
 .cardInscrito {
     display: inline-grid;
@@ -31,7 +13,7 @@
     width: 550px;
     /* max-width: 400px; */
     padding: 10px;
-    background: #121017;
+    background: #1f0630;
     border-radius: 24px;
     list-style-type: none;
     margin-bottom: 20px;
