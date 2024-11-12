@@ -1,16 +1,13 @@
-
 import React from 'react';
 import InscricoesList from '../components/Inscrições/InscricoesList';
-import logo from '../assets/logo.png'
-import './dashboard.css'
+import logo from '../assets/logo.png';
+import './dashboard.css';
+
 export default function Dashboard() {
-
-
-
     return (
-        <div>
+        <div className="dashboard-container">
             <div className='img'>
-                <img src={logo} alt='' />
+                <img src={logo} alt='Logo do Acampa2025' />
             </div>
 
             <div className='header'>
@@ -18,8 +15,6 @@ export default function Dashboard() {
             </div>
 
             <InscricoesList />
-
         </div>
     );
 }
-

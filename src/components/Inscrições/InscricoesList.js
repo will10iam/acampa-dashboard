@@ -1,37 +1,34 @@
-import React, { useState, useEffect } from 'react'
-import { db } from '../../firebase'
-import { collection, getDocs } from 'firebase/firestore'
-import image from '../../assets/image.jpg'
-import './inscricoes.css'
+import React, { useState, useEffect } from 'react';
+import { db } from '../../firebase';
+import { collection, getDocs } from 'firebase/firestore';
+import './inscricoes.css';
 
 export default function InscricoesList() {
     const [inscricoes, setInscricoes] = useState([]);
 
     useEffect(() => {
-
         const fetchInscricoes = async () => {
             const inscricoesCollection = collection(db, 'inscricoes');
             const inscricoesSnapshot = await getDocs(inscricoesCollection);
-            const InscricoesList = inscricoesSnapshot.docs.map(doc => ({
+            const inscricoesData = inscricoesSnapshot.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
             }));
-            setInscricoes(InscricoesList);
+            setInscricoes(inscricoesData);
         }
         fetchInscricoes();
     }, []);
-
 
     return (
         <div>
             <ul className='cardGeral'>
                 {inscricoes.map(inscricao => (
                     <li key={inscricao.id} className='cardInscrito'>
-                        <img src={image} alt="" />
+
                         <div>
                             <h2>{inscricao.name}</h2>
                             <h3>Pagamento: <span>{inscricao.payment}</span></h3>
-                            <a href={`https://api.whatsapp.com/send?phone=${inscricao.phone}&text=Olá!%20Queria%20conversar%20sobre%20o%20Acampa2025.`} class="bn3637 bn37" target='_blank' rel='noreferrer'>Entrar em Contato</a>
+                            <a href={`https://api.whatsapp.com/send?phone=${inscricao.phone}&text=Olá!%20Queria%20conversar%20sobre%20o%20Acampa2025.`} className="bn3637 bn37" target='_blank' rel='noreferrer'>Entrar em Contato</a>
                         </div>
                     </li>
                 ))}
