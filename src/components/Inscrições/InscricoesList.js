@@ -28,7 +28,7 @@ export default function InscricoesList() {
                         <div>
                             <h2>{inscricao.name}</h2>
                             <h3>Pagamento: <span>{inscricao.payment}</span></h3>
-                            <a href={`https://api.whatsapp.com/send?phone=${inscricao.phone}&text=Olá!%20Queria%20conversar%20sobre%20o%20Acampa2025.`} className="bn3637 bn37" target='_blank' rel='noreferrer'>Entrar em Contato</a>
+                            <a href={`https://api.whatsapp.com/send?phone=${inscricao.phone}&text=Olá!%20Queria%20conversar%20sobre%20o%20Acampa2025.`} className="bn3637 bn37" target='_blank' rel='noreferrer'>Chamar no Whats!</a>
                         </div>
                     </li>
                 ))}

@@ -33,7 +33,7 @@
 
 .cardInscrito h2 {
     font-size: 20px;
-    width: 20vw;
+    width: 23vw;
     margin-top: 0;
     margin-bottom: 5px;
     text-transform: capitalize;
@@ -87,8 +87,8 @@
 
 .bn37 {
     border-color: transparent;
-    background-color: #fff;
-    color: #000;
+    background-color: #25D366;
+    color: #fff;
     transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
 }
 
