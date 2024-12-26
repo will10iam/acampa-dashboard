@@ -3,6 +3,8 @@ import InscricoesList from '../components/Inscrições/InscricoesList';
 import logo from '../assets/logo.png';
 import './dashboard.css';
 
+
+
 export default function Dashboard() {
     return (
         <div className="dashboard-container">

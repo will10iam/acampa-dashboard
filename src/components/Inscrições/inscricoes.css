@@ -69,6 +69,48 @@
     border-radius: 40px;
 }
 
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards img {
+    margin-left: 15px;
+    border-radius: 20px;
+    height: 160px;
+    margin-right: 25px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.upload-button {
+    position: absolute;
+    bottom: 10px;
+    right: 35px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+
 .bn3637 {
     display: inline-flex;
     padding: 0.1rem 0.3rem;
@@ -94,6 +136,24 @@
 
 .bn37:hover {
     transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+    color: #1f0630;
+}
+
+.botão1 {
+    color: red;
+}
+
+.t-modal .modal-header {
+    color: red;
+}
+
+.btn-modal {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-modal:hover {
+    color: #1f0630;
 }
 
 @media (width <=600px) {
