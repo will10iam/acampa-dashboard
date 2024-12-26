@@ -162,6 +162,7 @@
         width: 90%;
         text-align: center;
         flex-direction: column;
+        margin-bottom: 50px;
     }
 
     .cardInscrito h2 {
@@ -184,9 +185,19 @@
 
 @media (width <=440px) {
     .cardInscrito img {
-        height: 45vw;
-        width: 45vw;
+        height: 40vw;
+        width: 40vw;
         border-radius: 50%;
-        margin: -140px 0 30px 0;
+        margin: -50px 0px 20px 0px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .upload-button {
+        background-color: transparent;
+        right: 140px;
+        bottom: 85px;
     }
 }
